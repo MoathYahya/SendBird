@@ -6,4 +6,14 @@
 //  Copyright © 2020 Moath Yahia. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+extension UIViewController {
+    
+    func displayAlertViewMessage(title: String, message: String) {
+        if !message.isEmpty {
+            let alertView = CPAlertVC.create().config(title: title, message: message)
+            alertView.show(into: self)
+        }
+    }
+}

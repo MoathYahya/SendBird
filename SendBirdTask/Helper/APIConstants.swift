@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  APIConstants.swift
 //  SendBirdTask
 //
 //  Created by Moath Yahia on 1/13/20.
@@ -7,3 +7,16 @@
 //
 
 import Foundation
+
+
+struct APIConstants {
+
+    static let baseURl: String = "https://api.itbook.store/1.0/"
+
+    static let newURL: String = "new"
+    
+    static let detailsBookURL: String = "books/"
+    
+    static let searchURL: String = "search/"
+    
+}

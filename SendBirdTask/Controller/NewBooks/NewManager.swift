@@ -12,14 +12,10 @@ import ObjectMapper
 extension NewVC: HttpControllerDelegate {
     func receivedResponseArray(_ dicResponse: [String : Any], tag: Int) {
         newModel  = Mapper<NewModel>().map(JSON: dicResponse)!
-        print(newModel)
         tableView.reloadData()
-
     }
     
     func receivedErrorWithMessage(_ message: String) {
-        print(message)
+        self.displayAlertViewMessage(title: "Error", message: message)
     }
-    
-    
 }

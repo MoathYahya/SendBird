@@ -17,22 +17,23 @@ class NewVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         setupCells()
-        
         http.delegate = self
         fetchData()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.topItem?.title = "New Books"
+
+    }
     
     func setupCells() {
-
         tableView.register(UINib(nibName: "NewBooksCell", bundle: nil), forCellReuseIdentifier: "NewBookCell")
         tableView.estimatedRowHeight = 150
     }
     
-    
     func fetchData() {
         http.get(path: APIConstants.baseURl + APIConstants.newURL, parameter: [:], tag: 1)
     }
-
 }

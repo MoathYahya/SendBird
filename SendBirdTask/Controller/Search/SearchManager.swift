@@ -7,3 +7,16 @@
 //
 
 import Foundation
+import ObjectMapper
+
+extension SearchVC: HttpControllerDelegate {
+    func receivedResponseArray(_ dicResponse: [String : Any], tag: Int) {
+        let tempNewModel  = Mapper<NewModel>().map(JSON: dicResponse)!
+        
+        reloadDataInTableView(data: tempNewModel)
+    }
+    
+    func receivedErrorWithMessage(_ message: String) {
+        self.displayAlertViewMessage(title: "Error", message: message)
+    }
+}

@@ -16,6 +16,12 @@ extension NewVC: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        let controller = self.storyboard?.instantiateViewController(withIdentifier: "DetailsBookVC") as! DetailsBookVC
+
+        if let book = newModel.books?[indexPath.row] {
+            controller.isbn = book.isbn13 ?? ""
+        }
+        self.navigationController?.pushViewController(controller,animated: true)
         self.tableView.deselectRow(at: indexPath, animated: true)
     }
 }

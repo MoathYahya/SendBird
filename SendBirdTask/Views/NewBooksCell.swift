@@ -19,11 +19,7 @@ class NewBooksCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        containerView.layer.cornerRadius = 7.0
-        containerView.layer.shadowColor = UIColor.darkGray.cgColor
-        containerView.layer.shadowOpacity = 1.5
-        containerView.layer.shadowOffset = .zero
-        containerView.layer.shadowRadius = 1.5
+        CustomDesign.customView(view: containerView, cornerRadius: 7.0, shadowColor: UIColor.darkGray, shadowRadius: 1.5, shadowOpacity: 1.5)
     }
     
     func fillData(_ data: BooksModel) {

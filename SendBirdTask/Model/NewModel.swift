@@ -7,3 +7,22 @@
 //
 
 import Foundation
+import ObjectMapper
+
+class NewModel: Mappable {
+    
+    var error   : String?
+    var total   : String?
+    var books   : [BooksModel]?
+    
+    required convenience init?(map: Map) {
+        self.init()
+    }
+    
+    func mapping(map: Map) {
+        error    <- map["error"]
+        total    <- map["total"]
+        books    <- map["books"]
+    }
+    
+}
