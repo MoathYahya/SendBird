@@ -1,0 +1,34 @@
+PODS:
+  - Alamofire (4.9.1)
+  - Cosmos (20.0.1)
+  - ObjectMapper (3.5.1)
+  - PKHUD (5.3.0)
+  - SDWebImage (5.4.2):
+    - SDWebImage/Core (= 5.4.2)
+  - SDWebImage/Core (5.4.2)
+
+DEPENDENCIES:
+  - Alamofire
+  - Cosmos (~> 20.0)
+  - ObjectMapper (~> 3.4)
+  - PKHUD (~> 5.0)
+  - SDWebImage
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Cosmos
+    - ObjectMapper
+    - PKHUD
+    - SDWebImage
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  Cosmos: b47fddf2102bb48580cd3025d9ce0a5c658a65da
+  ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
+  PKHUD: 98f3e4bc904b9c916f1c5bb6d765365b5357291b
+  SDWebImage: 4ca2dc4eefae4224bea8f504251cda485a363745
+
+PODFILE CHECKSUM: 8edca865b0d25001faeb0962eea7984e59da9c96
+
+COCOAPODS: 1.8.4
